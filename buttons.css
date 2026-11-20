@@ -1,0 +1,341 @@
+.button,
+.upload-button,
+.send-button,
+.new-course-button,
+.course-item,
+.course-delete,
+.add-document-compact,
+.remove-document,
+.source-chip,
+.prompt-chip,
+.quiz-grade-button,
+.icon-button {
+  font-family: inherit;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.button,
+.upload-button,
+.send-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 150ms, border-color 150ms, transform 150ms, box-shadow 150ms;
+}
+
+.button-primary,
+.upload-button,
+.send-button {
+  color: #fff;
+  background: var(--purple);
+  border-color: var(--purple);
+  font-weight: 800;
+}
+
+.button-primary:hover,
+.upload-button:hover,
+.send-button:hover:not(:disabled) {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
+  box-shadow: 0 5px 12px #4f46bf38;
+  transform: translateY(-1px);
+}
+
+.upload-button {
+  min-height: 48px;
+  padding: 0 18px;
+  box-shadow: 0 3px 7px #5e55d926;
+}
+
+.send-button {
+  min-width: 96px;
+  min-height: 44px;
+}
+
+.upload-button svg,
+.send-button svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.send-button:disabled {
+  color: #a9afb7;
+  background: #f1f2f1;
+  border-color: #e8e9e7;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button-secondary {
+  color: #5e6875;
+  background: #fff;
+  border-color: #e0e3e2;
+}
+
+.button-secondary:hover {
+  background: #f7f8f6;
+  border-color: #ccd0d0;
+}
+
+.new-course-button {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  color: #1d2937;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: left;
+  transition: background 150ms, transform 150ms;
+}
+
+.new-course-button:hover {
+  background: #c9f294;
+  transform: translateY(-1px);
+}
+
+.new-course-icon {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  place-items: center;
+  background: #a7d96a;
+  border-radius: 7px;
+}
+
+.new-course-icon svg { width: 17px; height: 17px; }
+
+.shortcut-hint {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin-left: auto;
+  place-items: center;
+  color: #41602f;
+  background: #d9f4b8;
+  border-radius: 6px;
+  font: 14px "DM Mono", monospace;
+}
+
+.course-row {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 2px;
+}
+
+.course-item {
+  display: flex;
+  width: auto;
+  min-width: 0;
+  min-height: 58px;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  color: #dae0e7;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: left;
+  transition: background 150ms;
+}
+
+.course-item:hover { background: #ffffff0e; }
+.course-item[aria-current="page"] { color: #fff; background: #2b394a; border-color: #ffffff12; }
+.course-item-icon { display: grid; width: 33px; height: 33px; flex: 0 0 33px; place-items: center; color: #c4d1df; background: #293747; border-radius: 9px; }
+.course-item[aria-current="page"] .course-item-icon { color: #d7f4ae; background: #3c5144; }
+.course-item-icon svg { width: 17px; height: 17px; }
+.course-item-arrow { width: 15px; height: 15px; color: #aeb8c5; opacity: 0; transition: opacity 150ms; }
+.course-item:hover .course-item-arrow,
+.course-item[aria-current="page"] .course-item-arrow { opacity: 1; }
+
+.course-delete {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  color: #f0a49b;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  opacity: 0;
+  visibility: hidden;
+  transition: color 130ms, background 130ms, border-color 130ms, opacity 130ms, visibility 130ms;
+}
+
+.course-row:hover .course-delete,
+.course-row:focus-within .course-delete,
+.course-item[aria-current="page"] + .course-delete { opacity: 1; visibility: visible; }
+.course-delete:hover { color: #fff; background: #9f4d48; border-color: #b76059; }
+.course-delete svg { width: 17px; height: 17px; }
+
+.add-document-compact {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  color: #5149bd;
+  background: #f7f6ff;
+  border: 1px solid #e4e2fa;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 130ms, border-color 130ms;
+}
+
+.add-document-compact:hover { background: #eeecff; border-color: #d3d0f5; }
+.add-document-compact svg { width: 17px; height: 17px; flex: 0 0 17px; }
+
+.document-count-toggle {
+  display: inline-flex;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  color: #505b6a;
+  background: #fafaf8;
+  border: 1px solid #e4e7e3;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 130ms, background 130ms, border-color 130ms;
+}
+
+.document-count-toggle:hover { color: #5149bd; background: #f7f6ff; border-color: #d9d6f1; }
+.document-count-toggle svg { width: 17px; height: 17px; flex: 0 0 17px; }
+
+.remove-document {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  color: #788391;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+}
+
+.remove-document:hover { color: #a94e49; background: #f8e9e7; }
+.remove-document svg { width: 17px; height: 17px; }
+
+.prompt-chip {
+  min-height: 44px;
+  padding: 8px 14px;
+  color: #566172;
+  background: #fafaf8;
+  border: 1px solid #e6e8e4;
+  border-radius: 999px;
+  font-size: 13px;
+  transition: color 130ms, background 130ms, border-color 130ms;
+}
+
+.prompt-chip:hover { color: #4b43b5; background: #f7f6ff; border-color: #d8d5f8; }
+
+.chat-study-actions { display: flex; align-items: center; gap: 6px; }
+.chat-study-button { display: inline-flex; min-width: 106px; min-height: 44px; align-items: center; justify-content: center; gap: 6px; padding: 0 10px; color: #574fae; background: #f7f6ff; border: 1px solid #e4e2f7; border-radius: 9px; font-size: 12px; font-weight: 700; white-space: nowrap; transition: background 140ms, border-color 140ms; }
+.chat-study-button:hover:not(:disabled) { background: #eeecff; border-color: #d3d0f5; }
+.chat-study-button:disabled { color: #9da2ae; background: #f3f4f2; border-color: #e6e8e4; cursor: wait; }
+.chat-study-button svg { width: 16px; height: 16px; flex: 0 0 16px; }
+.quiz-settings-button { width: 44px; height: 44px; min-width: 44px; min-height: 44px; flex-basis: 44px; color: #596575; background: #fff; border-color: #e5e7e4; }
+.quiz-settings-button:hover:not(:disabled) { color: #5149bd; background: #f5f4ff; border-color: #dedbf6; }
+.quiz-settings-button:disabled { color: #a9afb7; background: #f1f2f1; cursor: wait; }
+.quiz-settings-button svg { width: 21px; height: 21px; stroke-width: 1.8; }
+
+.concept-quiz-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 6px; padding: 0 10px; color: #5851a6; background: #f7f6ff; border: 1px solid #e6e3f6; border-radius: 8px; font-size: 12px; font-weight: 700; }
+.concept-quiz-button:hover { background: #eeecff; border-color: #d3d0f5; }
+.concept-quiz-button svg { width: 15px; height: 15px; }
+.quiz-grade-button { display: inline-flex; min-width: 92px; min-height: 44px; align-items: center; justify-content: center; padding: 0 14px; color: #fff; background: #5e55d9; border: 1px solid #5e55d9; border-radius: 8px; font-size: 12px; font-weight: 800; transition: background 130ms, border-color 130ms; }
+.quiz-grade-button:hover:not(:disabled) { background: #4c43be; border-color: #4c43be; }
+.quiz-grade-button:disabled { color: #a9afb7; background: #f1f2f1; border-color: #e8e9e7; cursor: not-allowed; }
+
+.quiz-option { display: flex; min-height: 44px; align-items: center; gap: 9px; padding: 7px 10px; color: #4d5967; background: #fff; border: 1px solid #e5e8e4; border-radius: 8px; font-size: 12px; line-height: 1.5; text-align: left; transition: background 120ms, border-color 120ms; }
+.quiz-option:hover { background: #f8f7ff; border-color: #dcd9f2; }
+.quiz-option.is-selected { background: #f2f0ff; border-color: #b9b4eb; }
+.quiz-option.is-correct { background: #f1f7eb; border-color: #bed8a7; }
+.quiz-option.is-incorrect { background: #fff4f0; border-color: #ebc4b8; }
+.quiz-option-letter { display: grid; width: 24px; height: 24px; flex: 0 0 24px; place-items: center; color: #66609f; background: #f0effb; border-radius: 7px; font: 10px "DM Mono", monospace; }
+.quiz-option.is-correct .quiz-option-letter { color: #426533; background: #e2f0d5; }
+.quiz-option.is-incorrect .quiz-option-letter { color: #9c5147; background: #f7e4de; }
+
+.source-chip {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  color: #514b91;
+  background: #f5f4ff;
+  border: 1px solid #e3e1f8;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  overflow-wrap: anywhere;
+  transition: background 130ms, border-color 130ms;
+}
+
+.source-chip:hover { background: #edebff; border-color: #d2cff3; }
+.source-chip svg { width: 16px; height: 16px; flex: 0 0 16px; }
+
+.icon-button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  place-items: center;
+  color: #697482;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: color 140ms, background 140ms, border-color 140ms;
+}
+
+.icon-button:hover { color: #4f48bc; background: #f0effb; }
+.icon-button svg { width: 20px; height: 20px; }
+.mobile-menu { display: none; }
+.sidebar-close { display: grid; color: #c3ccd5; }
+.sidebar-close:hover { color: #fff; background: #2b394a; }
+.chat-expand-button { color: #596575; background: #f7f8f6; border-color: #e7e9e6; }
+.chat-expand-button:hover { color: #4f48bc; background: #f0effb; border-color: #dedbf6; }
+.dialog-close { margin: -4px -4px 0 0; }
+.file-picker-action { font-size: 12px; }
+
+@media (max-width: 760px) {
+  .mobile-menu,
+  .sidebar-close { display: grid; }
+  .course-delete { opacity: 1; visibility: visible; }
+
+  .chat-study-button { width: 44px; min-width: 44px; min-height: 44px; padding: 0; }
+  .chat-study-button span { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+}

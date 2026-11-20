@@ -1,0 +1,17 @@
+{
+  "name": "moa-study-space",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "node scripts/run-tests.js"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  }
+}

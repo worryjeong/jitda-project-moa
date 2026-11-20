@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d2937" />
+    <meta name="description" content="강의 PDF를 읽고 근거 페이지를 확인하며 공부하는 학습 도우미" />
+    <link rel="icon" href="data:," />
+    <title>모아 | 강의 공부 도우미</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/buttons.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <main class="boot-screen" role="status" aria-live="polite">
+        <span class="boot-mark" aria-hidden="true">M</span>
+        <p class="eyebrow">YOUR STUDY SPACE</p>
+        <h1>학습 공간을 불러오고 있어요</h1>
+        <p>잠시만 기다려 주세요. 화면이 바뀌지 않으면 새로고침해 주세요.</p>
+        <button class="button button-secondary" type="button" onclick="location.reload()">새로고침</button>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

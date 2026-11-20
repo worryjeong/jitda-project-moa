@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-11-19T11:56:44.928Z",
+  "durationMs": 1203,
+  "status": "passed",
+  "summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "suite": "LLM 서버 연결",
+      "name": "API 기본 주소를 Chat Completions 경로로 정리하고 위험한 주소는 거부한다",
+      "status": "passed"
+    },
+    {
+      "suite": "LLM 서버 연결",
+      "name": "상태 API는 키 설정 여부만 반환하고 키 값은 공개하지 않는다",
+      "status": "passed"
+    },
+    {
+      "suite": "LLM 서버 연결",
+      "name": "질문·요약·두 종류의 문제 생성·채점을 서버 키로 각각 전송한다",
+      "status": "passed"
+    },
+    {
+      "suite": "LLM 서버 연결",
+      "name": "잘못된 문제 설정과 채점 입력은 LLM 호출 전에 거부한다",
+      "status": "passed"
+    },
+    {
+      "suite": "LLM 서버 연결",
+      "name": "키가 설정되지 않은 서버는 AI 호출을 하지 않고 설정 안내를 반환한다",
+      "status": "passed"
+    },
+    {
+      "suite": "PDF 검색과 출처 도구",
+      "name": "질문과 관련된 페이지를 점수순으로 최대 세 개 찾는다",
+      "status": "passed"
+    },
+    {
+      "suite": "PDF 검색과 출처 도구",
+      "name": "관련 용어가 없으면 출처를 추측하지 않고 빈 결과를 반환한다",
+      "status": "passed"
+    },
+    {
+      "suite": "PDF 검색과 출처 도구",
+      "name": "같은 PDF 출처와 중복 페이지를 한 묶음으로 만든다",
+      "status": "passed"
+    },
+    {
+      "suite": "PDF 검색과 출처 도구",
+      "name": "출처를 누르면 요청한 페이지의 본문을 페이지 순서로 가져온다",
+      "status": "passed"
+    },
+    {
+      "suite": "요약과 예상문제 도구",
+      "name": "강의 전체 대신 선택한 문서 페이지만 요약 입력으로 모은다",
+      "status": "passed"
+    },
+    {
+      "suite": "요약과 예상문제 도구",
+      "name": "긴 PDF 텍스트를 작은 요청 묶음으로 나누면서 내용을 보존한다",
+      "status": "passed"
+    },
+    {
+      "suite": "요약과 예상문제 도구",
+      "name": "객관식·주관식 개수와 PDF 페이지 범위를 함께 검증한다",
+      "status": "passed"
+    },
+    {
+      "suite": "요약과 예상문제 도구",
+      "name": "잘못된 개수, 페이지 범위, 비어 있는 출제 범위를 거부한다",
+      "status": "passed"
+    },
+    {
+      "suite": "요약과 예상문제 도구",
+      "name": "AI가 만든 문제를 파싱하고 설정한 개수와 다른 결과는 거부한다",
+      "status": "passed"
+    },
+    {
+      "suite": "주관식 채점 도구",
+      "name": "JSON 채점 결과를 점수에 따라 정답·부분 정답·오답으로 변환한다",
+      "status": "passed"
+    },
+    {
+      "suite": "주관식 채점 도구",
+      "name": "채점에 보낼 페이지를 문제 출처 안으로 제한한다",
+      "status": "passed"
+    }
+  ],
+  "files": [
+    "tests/study-tools.test.js",
+    "tests/study-api.test.js"
+  ]
+}
